@@ -50,7 +50,7 @@ The commercial PC gaming hub market features mega-cap technology corporations an
 
 ## ⚡ Open-Source GitHub Projects
 
-Open-source game library managers and emulation frontends offer high privacy, theme customization, and cross-platform flexibility for Windows, Linux, and Steam Deck users. Sorted by GitHub Stars_Count (descending):
+Open-source game library managers and emulation frontends offer high privacy, theme customization, and cross-platform flexibility for Windows, Linux, and Steam Deck users. Sorted by GitHub_Stars_Count (descending):
 
 - **[Playnite](https://github.com/JosefNemec/Playnite)** [![Playnite Stars](https://img.shields.io/github/stars/JosefNemec/Playnite?style=social&color=white)](https://github.com/JosefNemec/Playnite/stargazers)  
   🏆 **The leading open-source game library manager** (MIT licensed). Unifies Steam, Epic, GOG, EA, Ubisoft, Battle.net, Amazon, Xbox, and emulators into one interface. Fullscreen mode with controller support for TV/couch gaming, IGDB metadata integration, playtime tracking, themes, and extensions. **Best for uniting scattered game libraries on Windows**.
