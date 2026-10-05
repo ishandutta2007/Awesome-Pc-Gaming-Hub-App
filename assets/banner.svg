@@ -22,58 +22,20 @@
     </filter>
   </defs>
 
-  <style>
-    .title {
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 800;
-      font-size: 48px;
-      fill: #ffffff;
-    }
-    .subtitle {
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 400;
-      font-size: 20px;
-      fill: #00dfd8;
-      letter-spacing: 1.5px;
-    }
-    .badge-text {
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 600;
-      font-size: 14px;
-      fill: #ffffff;
-    }
-    
-    /* Background Dynamic Floating Orbs */
-    @keyframes float1 {
-      0% { transform: translate(0, 0) scale(1); }
-      50% { transform: translate(30px, -20px) scale(1.1); }
-      100% { transform: translate(0, 0) scale(1); }
-    }
-    @keyframes float2 {
-      0% { transform: translate(0, 0) scale(1); }
-      50% { transform: translate(-40px, 25px) scale(0.95); }
-      100% { transform: translate(0, 0) scale(1); }
-    }
-    @keyframes pulse {
-      0% { opacity: 0.2; }
-      50% { opacity: 0.6; }
-      100% { opacity: 0.2; }
-    }
-    
-    .orb-1 { animation: float1 8s ease-in-out infinite; }
-    .orb-2 { animation: float2 11s ease-in-out infinite; }
-    .grid-pattern { animation: pulse 4s ease-in-out infinite; }
-  </style>
-
   <!-- Background -->
   <rect width="1200" height="350" fill="url(#bg-gradient)" rx="16" />
 
-  <!-- Animated Background Elements (Kept in lower z-index / background) -->
-  <circle class="orb-1" cx="200" cy="100" r="180" fill="url(#glow)" />
-  <circle class="orb-2" cx="1000" cy="260" r="220" fill="url(#glow)" />
+  <!-- Animated Background Elements -->
+  <circle cx="200" cy="100" r="180" fill="url(#glow)">
+    <animateTransform attributeName="transform" type="translate" values="0,0; 30,-20; 0,0" dur="8s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="1000" cy="260" r="220" fill="url(#glow)">
+    <animateTransform attributeName="transform" type="translate" values="0,0; -40,25; 0,0" dur="11s" repeatCount="indefinite" />
+  </circle>
 
   <!-- Subtle Cyber Grid -->
-  <g class="grid-pattern" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1">
+  <g stroke="#ffffff" stroke-opacity="0.05" stroke-width="1">
+    <animate attributeName="opacity" values="0.2; 0.6; 0.2" dur="4s" repeatCount="indefinite" />
     <line x1="0" y1="50" x2="1200" y2="50" />
     <line x1="0" y1="100" x2="1200" y2="100" />
     <line x1="0" y1="150" x2="1200" y2="150" />
@@ -100,28 +62,28 @@
     <circle cx="165" cy="110" r="8" fill="#ffffff" />
   </g>
 
-  <!-- Foreground Content (Guaranteed Crisp & High Visibility) -->
+  <!-- Foreground Content -->
   <g transform="translate(110, 0)">
     <!-- Subtitle Badge -->
-    <rect x="0" y="72" width="310" height="32" rx="16" fill="#7928ca" fill-opacity="0.4" stroke="#7928ca" stroke-width="1" />
-    <text x="16" y="93" class="subtitle" font-size="14" fill="#ffffff">🎮 AWESOME PC GAMING HUB APP</text>
+    <rect x="0" y="72" width="320" height="32" rx="16" fill="#7928ca" fill-opacity="0.4" stroke="#7928ca" stroke-width="1" />
+    <text x="16" y="93" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="400" font-size="14" fill="#ffffff" letter-spacing="1.5">🎮 AWESOME PC GAMING HUB APP</text>
 
     <!-- Main Title -->
-    <text x="0" y="160" class="title" filter="url(#shadow)">PC Gaming Hub Ecosystem 🚀</text>
+    <text x="0" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="48" fill="#ffffff" filter="url(#shadow)">PC Gaming Hub Ecosystem 🚀</text>
 
     <!-- Subtitle Description -->
-    <text x="0" y="200" class="subtitle">Unified Game Launchers, Store Aggregators & Library Managers</text>
+    <text x="0" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="400" font-size="20" fill="#00dfd8" letter-spacing="1.5">Unified Game Launchers, Store Aggregators &amp; Library Managers</text>
 
     <!-- Category Pills -->
     <g transform="translate(0, 230)">
       <rect x="0" y="0" width="130" height="32" rx="8" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.2" />
-      <text x="65" y="21" class="badge-text" text-anchor="middle">💻 SaaS Hubs</text>
+      <text x="65" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="600" font-size="14" fill="#ffffff" text-anchor="middle">💻 SaaS Hubs</text>
 
       <rect x="145" y="0" width="160" height="32" rx="8" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.2" />
-      <text x="225" y="21" class="badge-text" text-anchor="middle">⚡ Open-Source</text>
+      <text x="225" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="600" font-size="14" fill="#ffffff" text-anchor="middle">⚡ Open-Source</text>
 
       <rect x="320" y="0" width="160" height="32" rx="8" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.2" />
-      <text x="400" y="21" class="badge-text" text-anchor="middle">🕹️ Emulators & Sync</text>
+      <text x="400" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="600" font-size="14" fill="#ffffff" text-anchor="middle">🕹️ Emulators &amp; Sync</text>
     </g>
   </g>
 </svg>
